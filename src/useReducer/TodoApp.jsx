@@ -10,7 +10,7 @@ export const TodoApp = () => {
     return (
         <>
             <div className="col-12">
-                <h4>Agregar tarea</h4>
+                <h3 className="mb-3 text-info text-uppercase">Agregar tarea</h3>
                 <TodoAdd 
                     onNewTodo={ handleNewTodo }  
                 />
@@ -18,7 +18,10 @@ export const TodoApp = () => {
 
             <hr />
 
-            <h1>Tareas: { todosCount }, <small>pendientes: { pendingTodosCount }</small> </h1>
+            <div className="d-flex flex-row justify-content-center align-items-center mb-3">
+                <span className="texto-pendiente text-uppercase">Tareas: { todosCount } </span>
+                <span className="texto-pendiente text-uppercase">Pendientes: { pendingTodosCount } </span>
+            </div>
 
             <div className="row">
                 <div className="col-12">
@@ -29,9 +32,6 @@ export const TodoApp = () => {
                     />
                 </div>
             </div>
-
-
-        
         </>
     )
 }
