@@ -4,4 +4,4 @@
 build -t guilleperalta/tareas .
 
 # Para crear el contenedor y correrlo en el puerto 3500
-docker run -p 3500:3500 guilleperalta/tareas
+docker run -d -p 3500:3500 --restart always guilleperalta/tareas
