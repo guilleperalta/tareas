@@ -11,7 +11,7 @@ services:
         source: tareas_volume
         target: /app
     ports:
-      - "3600:3600"
+      - "3500:3500"
     working_dir: /app
 
 volumes:
