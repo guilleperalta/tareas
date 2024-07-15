@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tareas_image:latest
+    restart: always
+    container_name: tareas
+    volumes:
+      - type: volume
+        source: tareas_volume
+        target: /app
+    ports:
+      - "3600:3600"
+    working_dir: /app
+
+volumes:
+  tareas_volume:
+    name: volume-tareas
+
+## Instrucciones para correr el contenedor
+# docker-compose up -d
+# docker-compose down --rmi all | Elimina el contenedor y la imagen
+# docker-compose down --rmi all --volumes | Elimina el contenedor, la imagen y el volumen
