@@ -3,9 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: tareas_image:latest
+    image: image-tareas:latest
     restart: always
-    container_name: tareas
+    container_name: container-tareas
     volumes:
       - type: volume
         source: tareas_volume
