@@ -6,19 +6,5 @@ services:
     image: image-tareas:latest
     restart: always
     container_name: container-tareas
-    volumes:
-      - type: volume
-        source: tareas_volume
-        target: /app
     ports:
-      - "12000:5173"
-    working_dir: /app
-
-volumes:
-  tareas_volume:
-    name: volume-tareas
-
-## Instrucciones para correr el contenedor
-# docker-compose up -d
-# docker-compose down --rmi all | Elimina el contenedor y la imagen
-# docker-compose down --rmi all --volumes | Elimina el contenedor, la imagen y el volumen
+      - "12000:80"
