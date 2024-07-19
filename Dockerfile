@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-CMD ["sh", "-c", "npm run dev & php-fpm"]
+RUN npm run build
 
 # Etapa de producción
 FROM nginx:alpine
