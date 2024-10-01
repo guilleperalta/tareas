@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: image-tareas:latest
-    restart: unless-stopped
+    restart: always
     container_name: container-tareas
     ports:
       - "12000:80"
